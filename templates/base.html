@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}مولانا{% endblock %}</title>
+   <!-- استایل پیش‌فرض برای دسکتاپ -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles-desktop.css') }}">
+
+<!-- استایل مخصوص موبایل -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles-mobile.css') }}" media="screen and (max-width: 768px)">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">🏠 خانه</a></li>
+                <li><a href="{{ url_for('about') }}">📖 درباره کتاب</a></li>
+                <li><a href="{{ url_for('poems') }}">📝 اشعار</a></li>
+                <li><a href="{{ url_for('comments') }}">💬 نظرات</a></li>
+                <li><a href="{{ url_for('contact') }}">📞 تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>تمامی حقوق محفوظ است &copy; 2025 | <a href="{{ url_for('contact') }}">تماس با ما</a></p>
+    </footer>
+</body>
+</html>

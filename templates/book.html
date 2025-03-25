@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرفی کتاب</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='mobile.css') }}" media="only screen and (max-width: 768px)">
+</head>
+<body>
+    <header>
+        <h1>معرفی کتاب</h1>
+        <nav>
+            <ul>
+                <li><a href="/">خانه</a></li>
+                <li><a href="/book">کتاب‌ها</a></li>
+                <li><a href="#">پرفروش‌ترین</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="book-details">
+            <h2>عشق سیرآشنای مولانا</h2>
+            <p><strong>نویسنده:</strong> سراز ارگان</p>
+            <p><strong>ترجمه:</strong> غنچه توکلی</p>
+            <p><strong>قیمت:</strong> ۱۵۰,۰۰۰ تومان</p>
+            <button>مشاهده کتاب</button>
+        </section>
+    </main>
+</body>
+</html>

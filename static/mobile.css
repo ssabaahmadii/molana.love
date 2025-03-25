@@ -1,0 +1,207 @@
+/* ✅ استایل کلی */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* ✅ هدر کلی */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2a2e3d;
+    color: white;
+    position: relative;
+}
+
+/* ✅ دکمه همبرگر (فقط موبایل) */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* پیش‌فرض مخفی */
+}
+
+/* ✅ منوی دسکتاپ */
+#desktop-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+#desktop-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ✅ متن‌های اصلی */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ✅ عکس کتاب */
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* ✅ فوتر */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2a2e3d;
+    color: white;
+    margin-top: 20px;
+}
+
+/* ✅ فقط در موبایل منوی همبرگری و استایل خاص */
+@media (max-width: 768px) {
+
+    /* مخفی کردن نسخه دسکتاپ */
+    .desktop-version {
+        display: none;
+    }
+
+    /* نمایش نسخه موبایل */
+    .mobile-version {
+        display: block;
+        text-align: center;
+    }
+
+    /* نمایش همبرگر و مخفی کردن منوی دسکتاپ */
+    .menu-icon {
+        display: block;
+    }
+
+    #desktop-menu {
+        display: none;
+    }
+
+    /* استایل منوی موبایل */
+    #mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #2a2e3d;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #mobile-menu li {
+        list-style: none;
+        padding: 10px;
+    }
+
+    #mobile-menu li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* نمایش منو هنگام کلیک */
+    .show-menu {
+        display: flex !important;
+    }
+
+    /* دکمه تماس با ما در موبایل */
+    .mobile-contact {
+        display: block;
+        text-align: center;
+        background-color: #6200ea;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px auto;
+        width: fit-content;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* وسط‌چین کردن متن در موبایل */
+    h1, h2, h3, p {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+   h1 {
+    font-size: 25px; /* اندازه فونت */
+    margin-top: 30px; /* فاصله از بالا (بیشتر کردن مقدار، باعث پایین‌تر رفتن h1 می‌شود) */
+    text-align: center; /* وسط‌چین کردن */
+}
+
+p {
+    margin-top: -10px; /* مقدار منفی باعث می‌شود متن کمی بالاتر بیاید */
+}
+/* استایل پیش‌فرض برای دسکتاپ */
+.mobile-content {
+  display: none; /* این بخش برای تمام دستگاه‌ها (در ابتدا) مخفی است */
+}
+
+/* استایل برای موبایل */
+@media (max-width: 600px) {
+  .mobile-content {
+    display: block; /* در موبایل، این بخش نمایش داده می‌شود */
+  }
+
+  /* مخفی کردن سایر محتوا در موبایل */
+  .desktop-content {
+    display: none; /* در موبایل این بخش مخفی می‌شود */
+  }
+}
+@media (max-width: 768px) {  
+    .contact-link {  
+        display: inline-block;  
+        background-color: white;  /* پس‌زمینه سفید */
+        color: black;  /* متن مشکی */
+        padding: 6px 6px;  
+        border-radius: 8px;  
+        text-decoration: none;  
+        font-weight: bold;  
+        font-size: 16px;  
+        border: 2px solid black;  /* حاشیه مشکی برای تأکید بیشتر */
+        transition: background 0.3s ease, color 0.3s ease;  
+    }  
+
+    .contact-link:hover {  
+        background-color: #f0f0f0;  /* تغییر رنگ به خاکستری روشن هنگام هاور */
+    }  
+}
+/* استایل پیش‌فرض برای دسکتاپ */
+.desktop-content {
+  display: block; /* این بخش در ابتدا برای دسکتاپ نمایش داده می‌شود */
+}
+@media (max-width: 768px) {
+    ul {
+        list-style: none !important;
+    }
+    li::before,
+    li::after {
+        content: none !important;
+    }
+}
+@media (max-width: 768px) {
+    li::marker {
+        content: none;
+        display: none;
+    }
+
+    li {
+        list-style: none;
+    }
+}
+
+/* استایل برای موبایل */
+@media (max-width: 600px) {
+  .desktop-content {
+    display: none; /* در موبایل این بخش مخفی می‌شود */
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره کتاب</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        /* استایل برای وسط چین کردن محتوای صفحه */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #2a2e3d; /* رنگ آبی تیره */
+            color: white;
+            text-align: center;
+            padding: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+       footer {
+    background-color: #2a2e3d;
+    color: white;
+    text-align: center; /* اطمینان از وسط چین شدن متن */
+    padding: 5px 0; /* تنظیم بهتر فضای داخلی */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex; /* استفاده از flexbox */
+    justify-content: center; /* وسط‌چین کردن محتوا */
+    align-items: center; /* وسط‌چین کردن عمودی محتوا */
+}
+
+        h2 {
+            margin:0px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        /* برای وسط چین کردن تگ main */
+        main {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>درباره کتاب "عشق دیرآشنای رومی"</h1>
+        <nav>
+            <ul>
+                <li><a href="/">خانه</a></li>
+                <li><a href="/about">درباره کتاب</a></li>
+                <li><a href="/poems">گلچین</a></li>
+                <li><a href="{{ url_for('molana') }}">بیوگرافی مولانا</a></li>
+                <li><a href="/contact">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>درباره کتاب</h2>
+            <p> کتاب "عشق دیرآشنای رومی" نوشته سردار اوزکان، داستانی عرفانی و روحانی است که حول محور عشق، جستجوی معنویت و شناخت خود می‌چرخد. <br>شخصیت اصلی کتاب، فایپو، یک نقاش ایتالیایی است که در آستانه مرگ به دلیل بیماری سرطان، تصمیم می‌گیرد کتابی بنویسد تا تجربیات و درس‌های زندگی خود را با دوستش، مانیاس، به اشتراک بگذارد. <br>فایپو در این کتاب به بررسی سفرهای معنوی خود، از جمله سفر به استانبول و قونیه، و آشنایی با عرفان و تصوف می‌پردازد. او در طول این سفرها با شخصیت‌هایی مانند زینب خانم و مولانا جلال‌الدین رومی آشنا می‌شود و به درک عمیق‌تری از عشق و معنویت دست می‌یابد.</p>
+        </section>
+    </main>
+    <footer>
+        <p>تمامی حقوق محفوظ است &copy; 2025</p>
+    </footer>
+</body>
+</html>

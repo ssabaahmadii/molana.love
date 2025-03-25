@@ -1,0 +1,268 @@
+body { 
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    direction: rtl;  /* برای راست‌چین کردن متن */
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+/* تغییر رنگ هدر */
+header {
+    background-color:  #2a2e3d; /* آبی تیره */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0px;
+}
+
+/* تغییر رنگ فوتر */
+footer {
+    background-color:  #2a2e3d; /* آبی تیره */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 0px;
+    margin-top: 20px;
+}header h1 {
+    margin: 0;
+}
+/* تنظیمات وسط‌چین برای صفحه اشعار */
+.poems {
+    text-align: center;  /* وسط‌چین کردن متن */
+    max-width: 800px;  /* حداکثر عرض */
+    margin: 50px auto; /* مرکز کردن در صفحه */
+    padding: 20px;
+    background-color: #f8f9fa; /* پس‌زمینه روشن */
+    border-radius: 10px;
+}
+/* تنظیمات وسط‌چین برای صفحه تماس با ما */
+.contact {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل تیتر */
+.contact h2 {
+    font-size: 24px;
+    color: #0a3d62;
+    margin-bottom: 20px;
+}
+
+/* استایل متن */
+.contact p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* استایل برای آیکون‌ها */
+.contact i {
+    color: #0a3d62;
+    margin-left: 5px;
+}
+
+/* لینک اینستاگرام */
+.contact a {
+    text-decoration: none;
+    color: #0a3d62;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: #e84393;
+}
+/* استایل برای تیتر */
+.poems h2 {
+    font-size: 24px;
+    color: #0a3d62; /* آبی نفتی */
+    margin-bottom: 20px;
+}
+
+/* استایل برای متن */
+.poems p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro .book-image {
+    max-width: 40%;
+    margin-left: 20px;
+}
+
+.intro .text {
+    max-width: 55%;
+}
+
+.biography {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2e3d; /* پس‌زمینه خاکستری تیره */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.bio-image {
+    max-width: 40%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bio-text {
+    max-width: 55%;
+    color: #e0e0e0; /* خاکستری روشن */
+}
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-top: 10px;
+        width: 80%;
+    }
+
+    .book-image {
+        width: 70%;
+        margin-top: 15px;
+    }
+
+    .author-info, .translator-info {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {  
+    .book-container {  
+        display: flex;  
+        flex-direction: column;  
+        align-items: center;  
+        justify-content: center;  
+    }  
+
+    .book-image {  
+        width: 100%; /* عکس کاملاً عرض صفحه را بگیرد */  
+        max-width: 400px; /* اندازه‌ی حداکثری برای جلوگیری از بزرگ شدن بیش از حد */  
+        height: auto;  
+        display: block;  
+        margin: 20px auto; /* وسط‌چین کردن */  
+    }  
+}
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none !important; /* ❌ مخفی کردن همبرگر */
+    }
+
+    /* ✅ وسط‌چین کردن کل منو */
+    #desktop-menu {
+        width: 100%; /* تمام عرض صفحه را بگیرد */
+        text-align: center; /* گزینه‌ها دقیقاً وسط قرار بگیرند */
+        margin-top: 10px; /* فاصله از عنوان */
+    }
+
+    #desktop-menu ul {
+        display: flex;
+        justify-content: center; /* ✅ گزینه‌های داخل لیست وسط صفحه باشند */
+        list-style: none;
+        padding: 0;
+        gap: 30px; /* فاصله بین گزینه‌ها */
+    }
+
+    #desktop-menu ul li {
+        display: inline-block;
+    }
+
+    #desktop-menu ul li a {
+        text-decoration: none;
+        color: white;
+
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none !important; /* ❌ مخفی کردن همبرگر */
+    }
+
+    #mobile-menu {
+        display: none !important; /* ❌ منوی موبایل در دسکتاپ مخفی شود */
+    }
+
+    /* ✅ وسط‌چین کردن کل منو در دسکتاپ */
+    #desktop-menu {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #desktop-menu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        gap: 30px;
+    }
+
+    #desktop-menu ul li {
+        display: inline-block;
+    }
+
+    #desktop-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+@media screen and (min-width: 768px) {
+    .desktop-contact { 
+        display: none !important; 
+    }
+}
